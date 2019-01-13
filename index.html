@@ -1,38 +1,108 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>THAI ADDRESS AUTO COMPLETE</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="js/jquery.ThaiAddress.En-Th.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.ThaiAddress.En-Th.css" />
 </head>
 
 <body>
 
-    <form name="form" id="form" action="">
-        <input type="text" name="district" id="district" value="" placeholder="district"><br>
-        <input type="text" name="amphoe" id="amphoe" value="" placeholder="amphoe"><br>
-        <input type="text" name="province" id="province" value="" placeholder="province"><br>
-        <input type="text" name="zipcode" id="zipcode" value="" placeholder="zipcode"><br>
-        <input type="submit" name="submit" id=submit value="submit">
-    </form>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-primary">
+                    <h3>ระบบออโต้คอมพลีตที่อยู่ ตำบล อำเภอ จังหวัด รหัสไปรษณีย์ ทั้งภาษาไทยและภาษาอังกฤษ</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col">
+                        <h2>ข้อมูลภาษาไทย</h2>
+                        <form name="form_th" id="form_th" action="">
+                            <input type="text" name="district_th" id="district_th" value="" placeholder="ตำบล" class="form-control"><br>
+                            <input type="text" name="amphoe_th" id="amphoe_th" value="" placeholder="อำเภอ" class="form-control"><br>
+                            <input type="text" name="province_th" id="province_th" value="" placeholder="จังหวัด" class="form-control"><br>
+                            <input type="text" name="zipcode_th" id="zipcode_th" value="" placeholder="รหัสไปรษณีย์" class="form-control"><br>
+                            <input type="submit" name="submit_th" id="submit_th" value="ส่งข้อมูล">
+                        </form>
+                </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
+                <div class="col">
+                        <h2>ข้อมูลภาษาอังกฤษ</h2>
+                        <form name="form_en" id="form_en" action="">
+                            <input type="text" name="district_en" id="district_en" value="" placeholder="District" class="form-control"><br>
+                            <input type="text" name="amphoe_en" id="amphoe_en" value="" placeholder="Amphoe" class="form-control"><br>
+                            <input type="text" name="province_en" id="province_en" value="" placeholder="Province" class="form-control"><br>
+                            <input type="text" name="zipcode_en" id="zipcode_en" value="" placeholder="Zipcode" class="form-control"><br>
+                            <input type="submit" name="submit_en" id="submit_en" value="Submit">
+                        </form>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                &nbsp;
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-success">
+                   <div>ผู้พัฒนา: ขวัญชัย แก้วยศ (Khwanchai Kaewyos)</div>
+                   <div>อีเมล: khwanchai@gmail.com</div>
+                   <div>โค้ด: <a href="https://github.com/LookHin/jquery.ThaiAddress.En-Th.js">https://github.com/LookHin/jquery.ThaiAddress.En-Th.js</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-warning">
+                    หากต้องการฟังชั่นหรือฟีเจอร์ต่างๆเพิ่มเติมจากที่มี แก้ไขได้ตามสะดวก :)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.ThaiAddress.En-Th.js"></script>
     <script>
-
-
-        /////////////////////////////
         $(function () {
+            // ฟอร์มภาษาไทย
             $.ThaiAddressEnTh({
-                lang: 'TH', //TH or EN
+                lang: 'TH',
                 database: 'js/thai_address_database_en_th.js',
-                district: $('#district'),
-                amphoe: $('#amphoe'),
-                province: $('#province'),
-                zipcode: $('#zipcode')
+                district: $('#district_th'),
+                amphoe: $('#amphoe_th'),
+                province: $('#province_th'),
+                zipcode: $('#zipcode_th')
+            });
+
+            // ฟอร์มภาษาอังกฤษ
+            $.ThaiAddressEnTh({
+                lang: 'EN',
+                database: 'js/thai_address_database_en_th.js',
+                district: $('#district_en'),
+                amphoe: $('#amphoe_en'),
+                province: $('#province_en'),
+                zipcode: $('#zipcode_en')
+            });
+
+            $("#form_th").submit(function(){
+                alert("ส่งข้อมูล");
+                return false;
+            });
+
+            $("#form_en").submit(function(){
+                alert("Submit Data");
+                return false;
             });
         });
     </script>
