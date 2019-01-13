@@ -6,7 +6,7 @@
 หากต้องการแก้ไขไม่ว่าส่วนใดก็ตาม เชิญ Fork และแก้ไขตามสะดวก
 
 ## ตัวอย่าง
-https://lookhin.github.io/jquery.ThaiAddress.En-Th.js/
+https://lookhin.github.io/jquery.ThaiAddress.En-Th.js/index.html?rand=123
 
 ![ตัวอย่าง](https://lookhin.github.io/jquery.ThaiAddress.En-Th.js/images/example.jpg "ตัวอย่าง")
 
