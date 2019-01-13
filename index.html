@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>THAI ADDRESS AUTO COMPLETE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="js/jquery.ThaiAddress.En-Th.css" />
+</head>
+
+<body>
+
+    <form name="form" id="form" action="">
+        <input type="text" name="district" id="district" value="" placeholder="district"><br>
+        <input type="text" name="amphoe" id="amphoe" value="" placeholder="amphoe"><br>
+        <input type="text" name="province" id="province" value="" placeholder="province"><br>
+        <input type="text" name="zipcode" id="zipcode" value="" placeholder="zipcode"><br>
+        <input type="submit" name="submit" id=submit value="submit">
+    </form>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.ThaiAddress.En-Th.js"></script>
+    <script>
+
+
+        /////////////////////////////
+        $(function () {
+            $.ThaiAddressEnTh({
+                lang: 'TH', //TH or EN
+                database: 'js/thai_address_database_en_th.js',
+                district: $('#district'),
+                amphoe: $('#amphoe'),
+                province: $('#province'),
+                zipcode: $('#zipcode')
+            });
+        });
+    </script>
+
+</body>
+</html>
