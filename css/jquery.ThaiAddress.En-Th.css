@@ -1,0 +1,29 @@
+/*
+ผู้พัฒนา: ขวัญชัย แก้วยศ (Khwanchai Kaewyos)
+อีเมล: khwanchai@gmail.com
+โค้ด: https://github.com/LookHin/jquery.ThaiAddress.En-Th.js
+*/
+.suggestion{
+    font-size: 0.9em;
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    z-index: 999;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.suggestion div{
+    padding: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.suggestion div:hover{
+    background-color: #e9e9e9;
+}
+
+.suggestion-active{
+    background-color: #4d8ffe !important;
+    color: #FFFFFF;
+}
