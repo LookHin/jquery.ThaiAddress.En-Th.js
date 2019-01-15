@@ -37,12 +37,12 @@ $(function () {
 ```
 
 ## Author
-Name : Khwanchai Kaewyos (LookHin)  
+Name : Khwanchai Kaewyos (LookHin)
 Email : khwanchai@gmail.com
 
 ## Website
-[www.unzeen.com](https://www.unzeen.com)  
-[Facebook](https://www.facebook.com/LookHin)  
+[www.unzeen.com](https://www.unzeen.com)
+[Facebook](https://www.facebook.com/LookHin)
 
 
 ## License ([MIT](https://opensource.org/licenses/MIT))
